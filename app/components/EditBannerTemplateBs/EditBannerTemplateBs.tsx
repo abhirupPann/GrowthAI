@@ -59,7 +59,7 @@ function EditBannerTemplateBs() {
                         </svg>
                 </button>
                 <div className="loadedimages flex gap-2">{
-                  imageSrc.map((img)=>(<Image src={img} width={40} height={5} alt='Image'className=' rounded-full cursor-pointer transition-opacity opacity-0 duration-[2s]' onLoadingComplete={(image)=> image.classList.remove("opacity-0")} onClick={()=>{setonChangebannerImg(img)}}/>))}
+                  imageSrc.map((img, i)=>(<Image key={i} src={img} width={40} height={5} alt='Image'className=' rounded-full cursor-pointer transition-opacity opacity-0 duration-[2s]' onLoadingComplete={(image)=> image.classList.remove("opacity-0")} onClick={()=>{setonChangebannerImg(img)}}/>))}
                         
                 </div>
              </div>
